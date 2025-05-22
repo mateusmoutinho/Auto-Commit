@@ -1,6 +1,6 @@
 # 🤖 Auto-Commit
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue.svg)](http://unlicense.org/)
 [![GitHub issues](https://img.shields.io/github/issues/mateusmoutinho/Auto-Commit)](https://github.com/mateusmoutinho/Auto-Commit/issues)
 [![GitHub stars](https://img.shields.io/github/stars/mateusmoutinho/Auto-Commit)](https://github.com/mateusmoutinho/Auto-Commit/stargazers)
 
@@ -62,7 +62,7 @@ vibescript autocommit commit
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is released into the public domain under the Unlicense - see the LICENSE file for details.
 
 ## 🤝 Contributing
 

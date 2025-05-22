@@ -27,9 +27,14 @@ function get_sugestion()
     return sugestion
 end 
 
-if action ~= "sugest" and action ~= "commit" then 
-    print("action must be between:(sugest,commit)")
+if action ~= "sugest" and action ~= "commit" and action ~= "add_and_commit" then 
+    print("action must be between:(sugest,commit,add_and_commit)")
 end 
+
+if action == "add_and_commit" then
+    os.execute("git add .")
+end 
+
 
 local sugestion = get_sugestion()
 if sugestion == nil then 
@@ -41,7 +46,7 @@ if action == "sugest" then
     print("sugestion: " .. sugestion)
 end 
 
-if action == "commit" then 
+if action == "commit"  or action ==  "add_and_commit" then 
     print("commited as:"..sugestion)
     os.execute("git commit -m '" .. sugestion .. "'")
 end 
