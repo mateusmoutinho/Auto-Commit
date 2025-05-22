@@ -52,6 +52,15 @@ To get an AI-generated commit message suggestion:
 vibescript autocommit suggest
 ```
 
+### Stage, Commit, and Push All Changes
+
+To stage all changes, create an AI-generated commit, and push to the remote repository in one command:
+
+```bash
+vibescript autocommit push
+```
+
+
 ### Make a Commit Automatically
 
 To generate a commit message and commit changes in one step:
@@ -68,13 +77,6 @@ To stage all changes and create an AI-generated commit in one command:
 vibescript autocommit stage_and_commit
 ```
 
-### Stage, Commit, and Push All Changes
-
-To stage all changes, create an AI-generated commit, and push to the remote repository in one command:
-
-```bash
-vibescript autocommit push
-```
 
 ## 📄 License
 
