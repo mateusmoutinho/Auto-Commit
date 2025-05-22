@@ -60,6 +60,14 @@ To generate a commit message and commit changes in one step:
 vibescript autocommit commit
 ```
 
+### Stage and Commit All Changes
+
+To stage all changes and create an AI-generated commit in one command:
+
+```bash
+vibescript autocommit add_and_commit
+```
+
 ## 📄 License
 
 This project is released into the public domain under the Unlicense - see the LICENSE file for details.
