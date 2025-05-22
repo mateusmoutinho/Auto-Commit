@@ -1,5 +1,4 @@
 
-local action = argv.get_next_unused()
 
 function get_sugestion()
     os.execute("git diff --cached > .commit_changes.txt")
@@ -25,6 +24,9 @@ function get_sugestion()
     response = llm.generate()
     return sugestion
 end 
+
+local action = argv.get_next_unused()
+
 
 if action ~= "sugest" and action ~= "commit" and action ~= "add_and_commit" then 
     print("action must be between:(sugest,commit,add_and_commit)")
