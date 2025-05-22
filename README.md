@@ -65,7 +65,7 @@ vibescript autocommit commit
 To stage all changes and create an AI-generated commit in one command:
 
 ```bash
-vibescript autocommit add_and_commit
+vibescript autocommit stage_and_commit
 ```
 
 ## 📄 License

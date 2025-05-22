@@ -28,11 +28,12 @@ end
 local action = argv.get_next_unused()
 
 
-if action ~= "sugest" and action ~= "commit" and action ~= "add_and_commit" then 
-    print("action must be between:(sugest,commit,add_and_commit)")
+if action ~= "sugest" and action ~= "commit" and action ~= "stage_and_commit" then 
+    print("action must be between:(sugest,commit,stage_and_commit)")
+    return 
 end 
 
-if action == "add_and_commit" then
+if action == "stage_and_commit" then
     os.execute("git add .")
 end 
 
@@ -47,7 +48,7 @@ if action == "sugest" then
     print("sugestion: " .. sugestion)
 end 
 
-if action == "commit"  or action ==  "add_and_commit" then 
+if action == "commit"  or action ==  "stage_and_commit" then 
     print("commited as:"..sugestion)
     os.execute("git commit -m '" .. sugestion .. "'")
 end 
