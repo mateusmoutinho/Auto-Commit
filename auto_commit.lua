@@ -3,9 +3,12 @@ local action = argv.get_next_unused()
 
 function get_sugestion()
     os.execute("git diff --cached > .commit_changes.txt")
-    local content = dtw.load_file(".commit_changes.txt")
+    local changes = dtw.load_file(".commit_changes.txt")
     llm = newLLM({})
     local sugestion = nil
+    llm.add_system_prompt("you objective its to suggest a commit message based on the changes")
+    llm.add_system_prompt("use the function set_commit_sugestion to set the commit sugestion")
+    llm.add_system_prompt("changes:"..changes)
     llm.add_function(
         "set_commit_sugestion", 
         "set the commit sugestio", 
@@ -13,7 +16,7 @@ function get_sugestion()
             {name = "sugestion",description="the commit sugestion name", type = "string", required = true},
         },
         function(args)
-            local sugestion = args.sugestion
+            sugestion = args.sugestion
             return "sugestion setted"
         end
     )
