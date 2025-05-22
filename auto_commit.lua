@@ -20,8 +20,6 @@ function get_sugestion()
             return "sugestion setted"
         end
     )
-
-    llm.add_user_prompt("list the src dir, and explain what's inside")
     response = llm.generate()
     dtw.remove_any(".commit_changes.txt")
     return sugestion
