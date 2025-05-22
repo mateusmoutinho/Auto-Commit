@@ -32,3 +32,7 @@ these will show a sugestion
 vibescript autocommit sugest
 ```
 #### Make the Commit 
+
+```bash
+vibescript autocommit commit
+```
