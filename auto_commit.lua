@@ -9,6 +9,8 @@ function get_sugestion()
     llm.add_system_prompt("you objective its to suggest a commit message based on the changes")
     llm.add_system_prompt("use the function set_commit_sugestion to set the commit sugestion")
     llm.add_system_prompt("changes:"..changes)
+    dtw.remove_any(".commit_changes.txt")
+
     llm.add_function(
         "set_commit_sugestion", 
         "set the commit sugestio", 
@@ -21,7 +23,6 @@ function get_sugestion()
         end
     )
     response = llm.generate()
-    dtw.remove_any(".commit_changes.txt")
     return sugestion
 end 
 
