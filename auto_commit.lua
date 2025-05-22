@@ -31,3 +31,13 @@ if action == "sugest" then
     local sugestion = get_sugestion()
     print("sugestion: " .. sugestion)
 end 
+elseif action == "commit" then 
+    local sugestion = get_sugestion()
+    if sugestion == nil then 
+        print("no sugestion")
+        return
+    end 
+    os.execute("git commit -m '" .. sugestion .. "'")
+else 
+    print("action must be between (sugest,commit)")
+end
